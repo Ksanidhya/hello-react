@@ -1,0 +1,38 @@
+--LIFECYCLE
+    1. Life Cycle Methods -- Used in Class
+    example in AboutUs.js
+    3 Major Lifecycle Methods
+        -- ComponentDidMount() --> called when component is created
+        -- ComponentDidUpdate() --> called when anything is updated in component
+        -- ComponentDidUnmount() --> Called when component is dead
+        Constructor --> called before component is created
+        Also have constructor; must call super() in first line
+
+    2. Life Cyscle Hooks -- Used in Function
+        We can use methods in function, so for that hooks are used.
+        There is only one type of hook --> useEffect() 
+        example in Mobile.js
+        import {useEffect,  --> Hook
+        useState}  --> To use state
+        from 'react'
+
+--STATE
+    like a varialble 
+    example in AboutUs.js
+
+--PROPS
+properties added to component, it is used between 2 components, from parent component 2 child component
+Example in App.js and AboutUS.js
+In App.js  <AboutUs Website="www.react.js"/> 
+In AboutUs.js
+    --This is using prop in class with 'this' keyword
+ console.warn(this.props.Website)
+    
+    -- This is using prop in function 
+        0. In App.js --> <ContactUs Adress={adress}/>
+        1. import React,{useEffect,useState} from 'react'
+        2. need to give props argument in function -->function ContactUs (props){ 
+        3. props.Adress
+     useEffect(()=>{
+        console.warn("check props from hook adress:",props.Adress)
+    })

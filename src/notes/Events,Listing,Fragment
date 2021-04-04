@@ -1,0 +1,32 @@
+Using functional components (can use class also)
+Example In COntactUs_Event.js
+
+Some Events:
+   <button onClick={()=>console.warn("Hello on Click")}>Click me</button>
+
+Listing 
+data comes from API...
+
+Doing listing without API
+ const[user,updateUser]=useState([
+        {name:"Abcd",age:"22"},
+        {name:"Efgh",age:"23"},
+        {name:"Hijk",age:"24"},
+        {name:"Lmno",age:"25"},
+        {name:"Pqrs",age:"26"},
+    ])
+    
+ return(<div>
+        <h1>This is User Listing</h1>
+        {
+            user.map((item,i) =>
+            <div key={i}>{item.name}, {item.age}</div>
+            )
+        }
+    </div>
+
+    )
+
+    FRAGMENT:
+    Fragment is used to remove unnecessary used tags. to use fragment give <> </> tages. 
+    or import Fragment from 'react' as use fragment  <Fragment></Fragment>.
